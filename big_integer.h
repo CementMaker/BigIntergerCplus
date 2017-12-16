@@ -6,8 +6,11 @@ using namespace std;
 
 class big_integer : public std::string {
 public:
-    big_integer (string num) : big_number(num) {}
-    big_integer () : big_number("0") {}
+    big_integer(string num) : big_number(num) {}
+    big_integer() : big_number("0") {}
+    big_integer(char *num) {
+        big_number = num;
+    }
 
     const std::string get_big_number() const { return big_number; }
     void set_big_number(string num) { big_number = num; }
